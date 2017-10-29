@@ -1,0 +1,16 @@
+<html>
+  <body>
+
+  <p style="color:red">${flash.message}</p>
+
+  <div>
+      <g:if test="${session.user}">
+          <img src="${session.user.profileImg}"> Bienvenido <strong>${session.user.name}</strong> |
+          <g:link controller="twitterLogin" action="logout">Logout</g:link>
+      </g:if>
+      <g:else>
+            <g:link controller="twitterLogin" action="login">Signin with Twitter</g:link>
+      </g:else>
+  </div>
+  </body>
+</html>
